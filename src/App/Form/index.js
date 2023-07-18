@@ -1,7 +1,7 @@
 import { Wrapper, Input, Button } from "./styled";
 import { useState, useRef } from "react";
 
-const Form = ({tasks, setTasks, addNewTask}) => {
+const Form = ({ tasks, setTasks, addNewTask }) => {
   const [inputValue, setInputValue] = useState("");
   const InputElement = useRef();
 
