@@ -3,17 +3,30 @@ import { ThemeProvider } from "styled-components";
 import theme from "../Utils/themes/theme";
 import Section from "./Section";
 import GlobalStyles from "./GlobalStyles";
+import Form from "./Form";
+import TasksContainer from "./TasksContainer";
+import { useState } from "react";
+import useTasks from "./useTasks";
 function App() {
+  const [tasks, setTasks, addNewTask, removeTask, changeTaskStatus, setAllTasksDone, isDoneTasksHidden, setIsDoneTasksHidden] = useTasks();
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Wrapper>
         <Heading>Lista zadań</Heading>
-        <Section content="form" heading="Dodaj nowe zadanie" />
         <Section
-          content="tasks"
+          content={<Form tasks={tasks} setTasks={setTasks} addNewTask={addNewTask} />}
+          heading="Dodaj nowe zadanie"
+        />
+        <Section
+          content={<TasksContainer tasks={tasks} removeTask={removeTask} changeTaskStatus={changeTaskStatus} isDoneTasksHidden={isDoneTasksHidden} />}
           heading="Lista zadań"
           additionalContent={true}
+          setAllTasksDone={setAllTasksDone}
+          setIsDoneTasksHidden={setIsDoneTasksHidden}
+          isDoneTasksHidden={isDoneTasksHidden}
+          tasks={tasks}
         />
       </Wrapper>
     </ThemeProvider>

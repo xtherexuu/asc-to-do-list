@@ -1,46 +1,29 @@
 import {
   Wrapper,
   SectionHeading,
-  Form,
-  Input,
-  Button,
-  TasksContainer,
-  Task,
-  TaskContent,
   SectionHeader,
+  Button,
 } from "./styled";
 
-import tasks from "../tasks";
+import { useState, useEffect, useRef } from "react";
 
-const Section = ({ content, heading, additionalContent }) => {
+// import useTasks from "../useTasks";
+
+const Section = ({ tasks, content, heading, additionalContent, setAllTasksDone, setIsDoneTasksHidden, isDoneTasksHidden }) => {
+  // const [tasks, setTasks] = useTasks();
+
   return (
     <Wrapper>
       <SectionHeader>
         <SectionHeading>{heading}</SectionHeading>
-        {additionalContent ? (
+        {additionalContent && tasks.length ? (
           <>
-            <Button additionalContent>Ukryj ukończone</Button>
-            <Button additionalContent>Ukończ wszystkie</Button>
+            <Button onClick={() => {setIsDoneTasksHidden(value => value = !value)}} additionalContent>{isDoneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}</Button>
+            <Button onClick={() => {setAllTasksDone()}} disabled={tasks.every(task => task.done === true) ? true : false} additionalContent>Ukończ wszystkie</Button>
           </>
         ) : null}
       </SectionHeader>
-
-      {content === "form" ? (
-        <Form>
-          <Input placeholder="Co jest do zrobienia?" />
-          <Button>Dodaj Zadanie</Button>
-        </Form>
-      ) : (
-        <TasksContainer>
-          {tasks.map((task) => (
-            <Task>
-              <Button changeTaskStatus>{task.done ? "✔" : ""}</Button>
-              <TaskContent isDone={task.done}>{task.taskContent}</TaskContent>
-              <Button deleteTask>🗑</Button>
-            </Task>
-          ))}
-        </TasksContainer>
-      )}
+      {content}
     </Wrapper>
   );
 };
