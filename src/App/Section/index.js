@@ -1,9 +1,5 @@
 import { Wrapper, SectionHeading, SectionHeader, Button } from "./styled";
 
-import { useState, useEffect, useRef } from "react";
-
-// import useTasks from "../useTasks";
-
 const Section = ({
   tasks,
   content,
@@ -13,8 +9,6 @@ const Section = ({
   setIsDoneTasksHidden,
   isDoneTasksHidden,
 }) => {
-  // const [tasks, setTasks] = useTasks();
-
   return (
     <Wrapper>
       <SectionHeader>

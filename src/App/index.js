@@ -5,7 +5,6 @@ import Section from "./Section";
 import GlobalStyles from "./GlobalStyles";
 import Form from "./Form";
 import TasksContainer from "./TasksContainer";
-import { useState } from "react";
 import useTasks from "./useTasks";
 function App() {
   const [
