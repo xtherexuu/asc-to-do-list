@@ -10,7 +10,3 @@ html, ::after, ::before {
 html {
   background-color: #dddd;
 }
-
-* {
-  color: hsl(0, 100%, 60%)
-}
