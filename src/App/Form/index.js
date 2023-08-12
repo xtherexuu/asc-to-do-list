@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 
 const Form = ({ tasks, setTasks, addNewTask }) => {
   const [inputValue, setInputValue] = useState("");
-  const InputElement = useRef();
+  const inputElement = useRef();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +18,7 @@ const Form = ({ tasks, setTasks, addNewTask }) => {
         placeholder="Co jest do zrobienia?"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        ref={InputElement}
+        ref={inputElement}
       />
       <Button>Dodaj Zadanie</Button>
     </Wrapper>
