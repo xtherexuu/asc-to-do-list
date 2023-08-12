@@ -1,4 +1,5 @@
-import { Wrapper, SectionHeading, SectionHeader, Button } from "./styled";
+import { Wrapper, SectionHeading, SectionHeader } from "./styled";
+import AdditionalButtons from "../AdditionalButtons";
 
 const Section = ({
   tasks,
@@ -13,29 +14,13 @@ const Section = ({
     <Wrapper>
       <SectionHeader>
         <SectionHeading>{heading}</SectionHeading>
-        {additionalContent && tasks.length ? (
-          <>
-            <Button
-              onClick={() => {
-                setIsDoneTasksHidden((value) => (value = !value));
-              }}
-              additionalContent
-            >
-              {isDoneTasksHidden ? "Pokaż ukończone" : "Ukryj ukończone"}
-            </Button>
-            <Button
-              onClick={() => {
-                setAllTasksDone();
-              }}
-              disabled={
-                tasks.every((task) => task.done === true) ? true : false
-              }
-              additionalContent
-            >
-              Ukończ wszystkie
-            </Button>
-          </>
-        ) : null}
+        <AdditionalButtons
+          additionalContent={additionalContent}
+          tasks={tasks}
+          setAllTasksDone={setAllTasksDone}
+          setIsDoneTasksHidden={setIsDoneTasksHidden}
+          isDoneTasksHidden={isDoneTasksHidden}
+        />
       </SectionHeader>
       {content}
     </Wrapper>
