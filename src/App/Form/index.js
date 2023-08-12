@@ -9,7 +9,7 @@ const Form = ({ tasks, setTasks, addNewTask }) => {
     event.preventDefault();
     addNewTask(inputValue.trim());
     setInputValue((value) => (value = ""));
-    InputElement.current.focus();
+    inputElement.current.focus();
   };
 
   return (
