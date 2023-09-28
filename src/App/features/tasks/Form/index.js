@@ -1,15 +1,31 @@
 import { Wrapper, Input, Button } from "./styled";
 import { useState, useRef } from "react";
+import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { addTask } from "../tasksSlice";
 
-const Form = ({ tasks, setTasks, addNewTask }) => {
+const Form = () => {
   const [inputValue, setInputValue] = useState("");
   const inputElement = useRef();
 
+  const dispatch = useDispatch();
+
   const onFormSubmit = (event) => {
     event.preventDefault();
-    addNewTask(inputValue.trim());
-    setInputValue((value) => (value = ""));
-    inputElement.current.focus();
+    if (!inputValue.trim()) {
+      setInputValue((value) => (value = ""));
+      inputElement.current.focus();
+    } else {
+      dispatch(
+        addTask({
+          taskContent: inputValue.trim(),
+          done: false,
+          id: nanoid(),
+        })
+      );
+      setInputValue((value) => (value = ""));
+      inputElement.current.focus();
+    }
   };
 
   return (

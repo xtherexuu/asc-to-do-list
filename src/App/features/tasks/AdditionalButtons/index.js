@@ -1,17 +1,18 @@
 import { Button } from "./styled";
+import { toggleHideDone, toggleAllTasksDone } from "../tasksSlice";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { SelectTasks } from "../tasksSlice";
 
-const Buttons = ({
-  additionalContent,
-  tasks,
-  isDoneTasksHidden,
-  setAllTasksDone,
-  setIsDoneTasksHidden,
-}) =>
-  additionalContent && tasks.length ? (
+const Buttons = ({ additionalContent }) => {
+  const { tasks, isDoneTasksHidden } = useSelector(SelectTasks);
+  const dispatch = useDispatch();
+
+  return additionalContent && tasks.length ? (
     <>
       <Button
         onClick={() => {
-          setIsDoneTasksHidden((value) => (value = !value));
+          dispatch(toggleHideDone());
         }}
         additionalContent
       >
@@ -19,7 +20,7 @@ const Buttons = ({
       </Button>
       <Button
         onClick={() => {
-          setAllTasksDone();
+          dispatch(toggleAllTasksDone());
         }}
         disabled={tasks.every((task) => task.done === true) ? true : false}
         additionalContent
@@ -28,5 +29,6 @@ const Buttons = ({
       </Button>
     </>
   ) : null;
+};
 
 export default Buttons;
