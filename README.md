@@ -7,6 +7,7 @@
 ## Description
 
 This application is a website, It is a to do list app. You can add a tasks which won't be saving in localStorage yet.
+
 ## Preview
 
 ![this is preview look of the application](src/Utils/preview.gif)
