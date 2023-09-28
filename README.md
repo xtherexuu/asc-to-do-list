@@ -6,8 +6,7 @@
 
 ## Description
 
-This application is a website, It is a to do list app. You can add a tasks which will be saving in your localStorage so you shouldn't lost it.
-
+This application is a website, It is a to do list app. You can add a tasks which won't be saving in localStorage yet.
 ## Preview
 
 ![this is preview look of the application](src/Utils/preview.gif)
@@ -19,6 +18,7 @@ This application is a website, It is a to do list app. You can add a tasks which
 - JS (ES6)
 - React
 - Custom Hooks
+- Redux
 - Styled Components
 - BEM Convention
 
