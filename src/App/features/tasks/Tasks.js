@@ -4,7 +4,7 @@ import theme from "../../../Utils/themes/theme";
 import Section from "../../common/Section";
 import GlobalStyles from "../../GlobalStyles";
 import Form from "./Form";
-import TasksContainer from "../../common/TasksContainer";
+import TasksContainer from "./TasksContainer";
 function Tasks() {
   return (
     <ThemeProvider theme={theme}>

@@ -1,13 +1,13 @@
 import { Wrapper, Button, TaskContent, Task } from "./styled";
 import { useSelector } from "react-redux";
 import {
-  SelectTasks,
+  selectTasksState,
   removeTask,
   toggleTaskDone,
-} from "../../features/tasks/tasksSlice";
+} from "../tasksSlice";
 import { useDispatch } from "react-redux";
 const TasksContainer = () => {
-  const { tasks, isDoneTasksHidden } = useSelector(SelectTasks);
+  const { tasks, isDoneTasksHidden } = useSelector(selectTasksState);
 
   const dispatch = useDispatch();
 
