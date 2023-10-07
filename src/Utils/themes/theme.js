@@ -1,7 +1,7 @@
 const theme = {
   breakpoints: {
     smallpc: "1100px",
-    mobile: "767px",
+    mobile: "780px",
     smallmobile: "400px",
   },
 };

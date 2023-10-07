@@ -6,19 +6,20 @@ export const Wrapper = styled.section`
 `;
 
 export const SectionHeader = styled.header`
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  grid-gap: 20px;
+  display: flex;
+  align-items: center;
   margin-bottom: 25px;
   padding-right: 20px;
   border-bottom: 2px solid #dddd;
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 0;
   }
 `;
 
 export const SectionHeading = styled.h2`
+  flex-shrink: 0;
+  flex-grow: 1;
   font-size: 2.5rem;
   font-weight: 700;
   padding: 25px;

@@ -1,12 +1,29 @@
 import styled, { css } from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    ${({ hidden }) =>
+      hidden &&
+      css`
+        display: none;
+      `}
+  }
+  ${({ hidden }) =>
+    hidden &&
+    css`
+      display: none;
+    `}
+`;
+
 export const Button = styled.button`
   color: white;
   background-color: teal;
-  font-size: 1.5rem;
-  padding: 11px;
+  font-size: 1.35rem;
   border: none;
-  margin: 0 25px 25px 25px;
   transition: background-color 0.5s, color 0.5s;
   &:hover {
     background-color: hsl(180, 100%, 35%);
@@ -28,8 +45,6 @@ export const Button = styled.button`
     css`
       background-color: transparent;
       color: teal;
-      margin: 0;
-      padding: 0;
       &:hover {
         background-color: transparent;
         color: hsl(180, 100%, 35%);
