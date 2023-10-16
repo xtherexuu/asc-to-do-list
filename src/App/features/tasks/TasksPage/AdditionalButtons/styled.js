@@ -21,6 +21,7 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   color: white;
+  cursor: pointer;
   background-color: teal;
   font-size: 1.35rem;
   border: none;

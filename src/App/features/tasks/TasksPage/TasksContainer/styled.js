@@ -1,6 +1,13 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: teal;
+`
 
 export const Button = styled.button`
+cursor: pointer;
   color: white;
   font-size: 1.5rem;
   border: none;
@@ -64,6 +71,7 @@ export const TaskContent = styled.p`
     isDone &&
     css`
       text-decoration: line-through;
+      text-decoration-color: teal;
     `}
   @media(max-width: ${({ theme }) => theme.breakpoints.smallpc}) {
     font-size: 1.25rem;

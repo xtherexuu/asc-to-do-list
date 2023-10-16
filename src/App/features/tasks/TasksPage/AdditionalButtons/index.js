@@ -3,13 +3,14 @@ import {
   toggleHideDone,
   toggleAllTasksDone,
   fetchExampleTasks,
-} from "../tasksSlice";
+} from "../../tasksSlice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { selectTasksState } from "../tasksSlice";
+import { selectTasks, selectIsDoneTasksHidden } from "../../tasksSlice";
 
 const Buttons = ({ additionalContent }) => {
-  const { tasks, isDoneTasksHidden } = useSelector(selectTasksState);
+  const tasks = useSelector(selectTasks);
+  const isDoneTasksHidden = useSelector(selectIsDoneTasksHidden)
   const dispatch = useDispatch();
 
   return additionalContent ? (

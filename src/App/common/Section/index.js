@@ -1,5 +1,5 @@
 import { Wrapper, SectionHeading, SectionHeader } from "./styled";
-import AdditionalButtons from "../../features/tasks/AdditionalButtons";
+import AdditionalButtons from "../../features/tasks/TasksPage/AdditionalButtons";
 
 const Section = ({
   content,
