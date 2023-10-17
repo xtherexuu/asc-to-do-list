@@ -1,12 +1,11 @@
 import { Wrapper, SectionHeading, SectionHeader } from "./styled";
-import AdditionalButtons from "../../features/tasks/TasksPage/AdditionalButtons";
 
 const Section = ({ content, heading, additionalContent }) => {
   return (
     <Wrapper>
       <SectionHeader>
         <SectionHeading>{heading}</SectionHeading>
-        <AdditionalButtons additionalContent={additionalContent} />
+        {additionalContent ? additionalContent.map((e) => e) : null}
       </SectionHeader>
       {content}
     </Wrapper>
