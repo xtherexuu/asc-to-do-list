@@ -8,17 +8,17 @@ export const Wrapper = styled.nav`
 `;
 
 export const StyledNavLink = styled(NavLink)`
-text-decoration: none;
-color: white;
+  text-decoration: none;
+  color: white;
   &.active {
     font-weight: bold;
   }
 `;
 
 export const List = styled.ul`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ListItem = styled.li`

@@ -68,4 +68,3 @@ export const selectTasksByQuery = (state, query) => {
 };
 
 export default tasksSlice.reducer;
- 

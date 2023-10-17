@@ -8,9 +8,7 @@ import Nav from "./common/Nav";
 export const App = () => {
   return (
     <HashRouter>
-      <Nav>
-        
-      </Nav>
+      <Nav />
       <Switch>
         <Route path="/zadania/:id">
           <TaskPage />

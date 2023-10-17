@@ -10,7 +10,7 @@ import { selectTasks, selectIsDoneTasksHidden } from "../../tasksSlice";
 
 const Buttons = ({ additionalContent }) => {
   const tasks = useSelector(selectTasks);
-  const isDoneTasksHidden = useSelector(selectIsDoneTasksHidden)
+  const isDoneTasksHidden = useSelector(selectIsDoneTasksHidden);
   const dispatch = useDispatch();
 
   return additionalContent ? (

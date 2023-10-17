@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: teal;
-`
+`;
 
 export const Button = styled.button`
-cursor: pointer;
+  cursor: pointer;
   color: white;
   font-size: 1.5rem;
   border: none;

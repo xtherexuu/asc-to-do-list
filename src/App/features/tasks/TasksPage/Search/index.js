@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Input from "../Input";
 import { useLocation, useHistory } from "react-router-dom";
 import { Wrapper } from "./styled";

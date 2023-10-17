@@ -1,7 +1,6 @@
 import { Wrapper, Button, TaskContent, Task, StyledLink } from "./styled";
 import { useSelector } from "react-redux";
 import {
-  selectTasks,
   selectTasksByQuery,
   selectIsDoneTasksHidden,
   removeTask,
@@ -37,7 +36,9 @@ const TasksContainer = () => {
             {task.done ? "✔" : ""}
           </Button>
           <TaskContent isDone={task.done}>
-            <StyledLink to={`/zadania/${task.id}`}>{task.taskContent}</StyledLink>
+            <StyledLink to={`/zadania/${task.id}`}>
+              {task.taskContent}
+            </StyledLink>
           </TaskContent>
           <Button
             onClick={() => {
