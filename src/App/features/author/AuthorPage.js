@@ -14,7 +14,7 @@ export default () => {
               Cześć!
               <br />
               Nazywam się <strong>Bartosz Załęski</strong> mam{" "}
-              <strong>16 lat</strong> i interesuję się programowaniem oraz
+              <strong>17 lat</strong> i interesuję się programowaniem oraz
               tworzeniem własnego biznesu online. W przyszłości chciałbym
               prowadzić własną firmę, związaną z marketingiem i programowaniem.
             </Paragraph>
