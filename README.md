@@ -6,7 +6,14 @@
 
 ## Description
 
-This application is a website, It is a to do list app. You can add a tasks which won't be saving in localStorage yet.
+Welcome to my To-Do List application! This website allows you to efficiently manage your tasks and stay organized. With our user-friendly interface, you can easily add, edit, and delete tasks as needed. All your tasks are saved directly to your browser's local storage, ensuring your to-do list is always available whenever you need it.
+
+### Key Features
+
+- Add Tasks: Quickly add new tasks to your list.
+- Edit Tasks: Modify existing tasks to keep your list up-to-date.
+- Delete Tasks: Remove completed or unnecessary tasks effortlessly.
+- Persistent Storage: Your tasks are saved in your browser's local storage, so they're always accessible even after you close and reopen the application.
 
 ## Preview
 
